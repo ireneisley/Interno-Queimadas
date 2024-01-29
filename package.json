@@ -1,0 +1,19 @@
+{
+  "name": "projetobarber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "./scripts/installAll",
+    "install-front": "./scripts/installFront.sh",
+    "install-back": "./scripts/installBack.sh",
+    "start": "./scripts/startAll.sh",
+    "start-front": "./scripts/startFront.sh",
+    "start-back": "./scripts/startBack.sh",
+    "compose": "./scripts/dockerCompose.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
