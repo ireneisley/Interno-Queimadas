@@ -4,10 +4,20 @@ import BASE_URL from '../constants/base_url';
 async function agendarService(agendarPayload) {
   const URL = `${BASE_URL}/agendamento`;
   const token = localStorage.getItem('token');
+  console.log("service",agendarPayload);
 
-  const response = await axios.post(URL, agendarPayload);
+  try{
+    const response = await axios.post(URL, agendarPayload);
 
-  return response;
+    console.log("Response",response);
+
+    return response;
+  }catch(error){
+    console.log(error);
+  }
+  
+
+  
 }
 
 export {

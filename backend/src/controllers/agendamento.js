@@ -3,7 +3,6 @@ const bcrypt = require("bcrypt");
 require("dotenv").config();
 
 const agendar = async (req, res) => {
-
     const {nome_barbeiro , nome_cliente,  servicos, data_marcacao , celular, hora_inicio, hora_termino} = req.body;
   
     try {

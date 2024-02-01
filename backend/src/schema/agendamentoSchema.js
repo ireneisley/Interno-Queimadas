@@ -1,7 +1,11 @@
 const joi = require("joi");
 
 const agendamentoSchema = joi.object({
-  celular_cliente: joi.string().min(9).allow('').optional(),
+  celular: joi.string().min(9).required().messages({
+    "string.min": "Celular deve ser preenchido corretamente.",
+    "string.empty": "Celular é obrigatório.",
+    "any.required": "Celular é obrigatório.",
+  }),
   nome_barbeiro: joi.string().min(4).required().messages({
     "string.min": "Nome do Funcionário deve ser preenchido corretamente.",
     "string.empty": "Nome do Funcionário é obrigatório.",
@@ -17,7 +21,8 @@ const agendamentoSchema = joi.object({
     "string.empty": "Hora do serviço é obrigatória.",
     "any.required": "Hora do serviço é obrigatória.",
   }),
-  hora_termino: joi.string().allow('').optional()
+  hora_termino: joi.string().allow('').optional(),
+  nome_cliente: joi.string().allow('').optional()
 });
 
 module.exports = agendamentoSchema;

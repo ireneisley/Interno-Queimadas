@@ -103,7 +103,8 @@ const Agendar = () => {
   const createNewScheduling = async () => {
     try {
       const response = await agendarService({
-        celular_cliente: celular, 
+        celular: celular, 
+        nome_cliente:clienteNome,
         nome_barbeiro: barbeiroNome,  
         servicos: servicoNome,
         data_marcacao: formatarDataBrasileira(dataMarcacao), 
