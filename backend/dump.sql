@@ -1,4 +1,4 @@
-CREATE DATABASE barbearia_db;
+CREATE DATABASE phionavalha_db;
 
 CREATE TABLE FUNCIONARIO (
 	id SERIAL PRIMARY KEY,
@@ -14,19 +14,6 @@ CREATE TABLE FUNCIONARIO (
   cargo TEXT NOT NULL
 );
 
-CREATE TABLE CLIENTE (
-    id SERIAL PRIMARY KEY,
-    nome TEXT NOT NULL,
-    email TEXT,
-    cpf_cnpj CHAR(15),
-    data_nascimento DATE,
-    data_de_cadastro DATE,
-    celular TEXT NOT NULL,
-    instagram TEXT,
-    naturalidade TEXT,
-    cidade TEXT,
-    endereco TEXT
-);
 
 CREATE TABLE SERVICO (
 	id SERIAL PRIMARY KEY,
@@ -36,19 +23,18 @@ CREATE TABLE SERVICO (
 
 CREATE TABLE AGENDAMENTO (
     id SERIAL PRIMARY KEY,
-    data_marcacao VARCHAR(10) NOT NULL, -- Use VARCHAR para armazenar a data como string
+    data_marcacao VARCHAR(10) NOT NULL,
     hora_inicio TIME NOT NULL,
     hora_termino TIME,
-    cliente_id INTEGER,
     funcionario_id INTEGER NOT NULL,
+    nome_cliente TEXT,
+    celular TEXT NOT NULL,
     servicos TEXT[],
-    FOREIGN KEY (cliente_id) REFERENCES CLIENTE(id), 
     FOREIGN KEY (funcionario_id) REFERENCES FUNCIONARIO(id)
 );
 
 CREATE TABLE COMANDA (
   id SERIAL PRIMARY KEY,
-  cliente_nome TEXT,
   funcionario_id INTEGER NOT NULL,
   servicos TEXT[],
   preco DECIMAL(10,2) NOT NULL,
@@ -58,30 +44,18 @@ CREATE TABLE COMANDA (
   FOREIGN KEY (funcionario_id) REFERENCES FUNCIONARIO(id)
 );
 
+
 INSERT INTO servico (nome, preco) VALUES
-  ('Corte Adulto', 00.00),
-  ('Corte Kids', 45.00),
-  ('Corte Feminino', 00.00),
-  ('Corte Navalhados', 50.00),
-  ('Babrboterapia', 45.00),
-  ('Pé e Mão', 00.00),
-  ('Pé', 00.00),
-  ('Mão', 00.00),
-  ('SPA dos Pés', 50.00),
-  ('SPA completo', 65.00),
-  ('Depilação Nasal', 25.00),
-  ('Depilação de Orelha', 25.00),
-  ('Sobrancelha Pinça/Cera', 00.00),
-  ('Acabamento', 20.00),
-  ('Selagem', 00.00),
-  ('Botox', 00.00),
-  ('Alisamento', 00.00),
-  ('Tintura Cabelo (Tinta Barbearia)', 00.00),
-  ('Tintura Cabelo (Tinta Cliente)', 00.00),
-  ('Tintura Barba (Tinta Cliente)', 00.00),
-  ('Tintura Barba (Tinta Barbearia)', 00.00),
-  ('Platinado', 00.00),
-  ('Hidratação', 00.00),
-  ('Lavagem Especial', 30.00),
-  ('Penteado', 30.00),
-  ('Revitalização Facial', 50.00);
+  ('Corte', 30.00),
+  ('Barbaterapia', 25.00),
+  ('Corte + Barbaterapia', 50.00),
+  ('Botox', 40.00),
+  ('Corte + Botox', 60.00),
+  ('Selagem', 60.00),
+  ('Corte + Selagem', 80.00),
+  ('Hidratação', 20.00),
+  ('Corte + Hidratação', 40.00),
+  ('Sobrancelha com Navalha', 10.00),
+  ('Sobrancelha com Pinça', 15.00),
+  ('Remoção de Cravo (Máscara Negra)', 20.00);
+ 

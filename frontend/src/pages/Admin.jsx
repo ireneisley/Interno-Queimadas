@@ -8,9 +8,7 @@ function Admin() {
 
   const { user, logOut } = useContext(UserContext);
 
-  const handleCadastroCLientes = () => {
-    history.push('/cadastro-cliente')
-  }
+
 
   const handleCadastroFuncionarios = () => {
     history.push('/cadastro-funcionario')
@@ -33,11 +31,7 @@ function Admin() {
   }
 
   const handleAgendar = () => {
-    history.push('/agendar')
-  }
-
-  const handleGestaoClientes = () => {
-    history.push('/gestao-clientes')
+    history.push('/')
   }
 
   if (!user || user.cargo.toLowerCase() !== 'administrador') {
@@ -48,7 +42,7 @@ function Admin() {
     <Box h="100vh" position="relative">
       {/* Logo */}
       <Image 
-        src="/sky.jpeg" 
+        src="/phio.jpeg" 
         alt="Logo" 
         h={{ base: 20, md: 32 }}
         maxW="100%"
@@ -63,7 +57,7 @@ function Admin() {
         w={{ base: 90, md: 200 }}
         p="6"
         type="button"
-        bg="gray.900"
+        bg="#52B587"
         color="white"
         fontWeight="bold"
         fontSize="xl"
@@ -84,7 +78,7 @@ function Admin() {
       <Center
         as="header"
         h={140}
-        bg="black"
+        bg="#52B587"
         color="white"
         fontWeight="bold"
         fontSize={{ base: '2xl', md: '4xl' }}
@@ -116,31 +110,13 @@ function Admin() {
             flexDir="column" 
             gap="4"
           >
-            <HStack spacing="4" justify="center">
-              <Button
-                w={240}
-                p="6"
-                type="submit"
-                bg="black" // Alteração aqui para cor preta
-                color="white"
-                fontWeight="bold"
-                fontSize="xl"
-                mt="2"
-                ml="2"
-                _hover={{ bg: "gray.900" }}
-                h="auto"
-                onClick={ handleCadastroCLientes }
-              >
-                Cadastrar Clientes
-              </Button>
-            </HStack>
 
             <HStack spacing="4" justify="center">
               <Button
                 w={240}
                 p="6"
                 type="submit"
-                bg="black" // Alteração aqui para cor preta
+                bg="#52B587" // Alteração aqui para cor preta
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -159,7 +135,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="black" // Alteração aqui para cor preta
+                bg="#52B587" // Alteração aqui para cor preta
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -178,7 +154,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="black" // Alteração aqui para cor preta
+                bg="#52B587" // Alteração aqui para cor preta
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -197,7 +173,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="black" // Alteração aqui para cor preta
+                bg="#52B587" // Alteração aqui para cor preta
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -216,26 +192,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="black" // Alteração aqui para cor preta
-                color="white"
-                fontWeight="bold"
-                fontSize="xl"
-                mt="2"
-                ml="2"
-                _hover={{ bg: "gray.900" }}
-                h="auto"
-                onClick={ handleGestaoClientes }
-              >
-                Gestão de Clientes
-              </Button>
-            </HStack>
-
-            <HStack spacing="4" justify="center">
-              <Button
-                w={240}
-                p="6"
-                type="submit"
-                bg="black" // Alteração aqui para cor preta
+                bg="#52B587" // Alteração aqui para cor preta
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -254,7 +211,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="black" // Alteração aqui para cor preta
+                bg="#52B587" // Alteração aqui para cor preta
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"

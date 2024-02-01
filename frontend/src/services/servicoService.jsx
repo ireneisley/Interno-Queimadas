@@ -7,11 +7,7 @@ async function listagemServicoService() {
     const token = localStorage.getItem('token');
   
     try {
-        const response = await axios.get(URL,{
-            headers: {
-            'Authorization': `Bearer ${token}`,
-            }
-        });
+        const response = await axios.get(URL);
       return response;
     } catch (error) {
     
@@ -27,9 +23,6 @@ async function listagemPrecoService(servico) {
   
     try {
         const response = await axios.get(URL,{
-            headers: {
-            'Authorization': `Bearer ${token}`,
-            },
             params: {
                 nome: servico.servico
             }

@@ -4,18 +4,10 @@ require("dotenv").config();
 
 const agendar = async (req, res) => {
 
-    const { celular_cliente, nome_barbeiro , servicos, data_marcacao , hora_inicio, hora_termino} = req.body;
+    const {nome_barbeiro , nome_cliente,  servicos, data_marcacao , celular, hora_inicio, hora_termino} = req.body;
   
     try {
-
-      const cliente = await knex("cliente").select("*").where('celular', celular_cliente).first();
       const funcionario = await knex('funcionario').select("*").where('nome', nome_barbeiro).first();
-
-      // if (!cliente) {
-      //   return res.status(400).json({
-      //     mensagem: "Cliente não cadastrado."
-      //   });
-      // }
 
       if (!funcionario) {
         return res.status(400).json({ mensagem: "Funcionário não encontrado." });
@@ -29,7 +21,6 @@ const agendar = async (req, res) => {
 
       }
       
-      const clienteId = cliente ? parseInt(cliente.id, 10) : null;
 
       const funcionarioId = parseInt(funcionario.id, 10);
       
@@ -55,7 +46,8 @@ const agendar = async (req, res) => {
       }
       const agendamento = await knex("agendamento")
         .insert({
-            cliente_id: clienteId,
+            nome_cliente,
+            celular,
             data_marcacao,
             funcionario_id: funcionarioId,
             hora_inicio,
@@ -121,7 +113,7 @@ const excluiAgendamento = async (req, res) => {
 const editarAgendamento = async (req, res) => {
   const { id } = req.params;
 
-  const { nome_barbeiro, servicos, data_marcacao, hora_inicio, hora_termino } = req.body;
+  const { nome_barbeiro, celular, nome_cliente, servicos, data_marcacao, hora_inicio, hora_termino } = req.body;
 
   try {
     const funcionario = await knex('funcionario').select("*").where({ nome: nome_barbeiro }).first();
@@ -152,6 +144,8 @@ const editarAgendamento = async (req, res) => {
     // Cria um objeto com os dados não nulos ou vazios
     const dadosAtualizados = {
       funcionario_id: funcionario.id,
+      nome_cliente,
+      celular,
       servicos,
       data_marcacao,
       hora_inicio,

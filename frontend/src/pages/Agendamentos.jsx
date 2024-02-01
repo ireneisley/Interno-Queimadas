@@ -111,7 +111,7 @@ function Agendamentos() {
   return (
     <Box h="100vh" position="relative">
       <Image 
-        src="/sky.jpeg" 
+        src="/phio.jpeg" 
         alt="Logo" 
         h={{ base: 16, md: 32 }} 
         position="absolute" 
@@ -124,7 +124,7 @@ function Agendamentos() {
         w={{ base: 70, md: 0 }}
         p="4"
         type="button"
-        bg="gray.900"
+        bg="#52B587"
         color="white"
         _hover={{ bg: "blue.500" }}
         position="absolute"
@@ -139,7 +139,7 @@ function Agendamentos() {
       <Center
         as="header"
         h={150}
-        bg="black"
+        bg="#52B587"
         color="white"
         fontWeight="bold"
         fontSize={{ base: '2xl', md: '4xl' }}
@@ -223,7 +223,7 @@ function Agendamentos() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="black"
+                bg="#52B587"
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -242,7 +242,7 @@ function Agendamentos() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="black"
+                bg="#52B587"
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"

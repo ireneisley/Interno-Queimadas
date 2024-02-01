@@ -19,14 +19,12 @@ function Comanda() {
 
   //Consts
   const [barbeiroNome, setbarbeiroNome] = useState('');
-  const [clienteNome, setclienteNome] = useState('');
   const [servicoNome, setservicoNome] = useState([])
   const [preco, setPreco] = useState('')
   const [barbeirosOptions, setBarbeirosOptions] = useState([]);
   const [servicosOptions, setServicosOptions] = useState([]);
   const [precosOptions, setPrecosOptions] = useState([]);
   const [barbeiroNomeValido, setbarbeiroNomeValido] = useState(false)
-  const [clienteNomeValido, setclienteNomeValido] = useState(false);
   const [registerBtnDisabled, setRegisterBtnDisabled] = useState(true); //! Estado de habilitação do botão
   const [selectedServices, setSelectedServices] = useState([]);
   const [cargo, setCargo] = useState('')
@@ -101,26 +99,15 @@ function Comanda() {
     setbarbeiroNomeValido(true)
   }, [barbeiroNome])
 
-  //Nome Cliente
-  useEffect(() => {
-    setclienteNomeValido(false)
-
-    const MIN_NAME_LENGTH = 3;
-
-    if (clienteNome.length < MIN_NAME_LENGTH) return;
-
-    setclienteNomeValido(true)
-  }, [clienteNome])
   
   useEffect(() => {
     setRegisterBtnDisabled(true);
 
     if (!barbeiroNomeValido) return;
-    if (!clienteNomeValido) return;
     if (!servicoNome) return;
     if (!preco) return;
     setRegisterBtnDisabled(false);
-  }, [barbeiroNomeValido, clienteNomeValido, servicoNome, preco]);
+  }, [barbeiroNomeValido, servicoNome, preco]);
 
   //------------------------------------------------------------------ Registro de Comandas -----------------------------------------------------
 
@@ -128,7 +115,6 @@ function Comanda() {
     try {
       const response = await comandaCadastroService({
         barbeiroNome,
-        clienteNome,
         servicoLista:servicoNome,
         preco
       });
@@ -245,16 +231,6 @@ function Comanda() {
                       <Select
                         options={ barbeirosOptions }
                         onChange={ handleSelectChangeBarbeiro }
-                      />
-                    </Box>
-
-                    <Box w="100%">
-                      <FormLabel htmlFor="nome" fontWeight="bold" fontSize="xl">Cliente</FormLabel>
-                      <Input 
-                        id="cliente"
-                        placeholder="Digite o nome do cliente"
-                        value = { clienteNome } 
-                        onChange={ ({ target: { value } }) => setclienteNome(value) }
                       />
                     </Box>
 

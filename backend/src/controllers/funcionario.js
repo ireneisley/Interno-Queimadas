@@ -5,8 +5,6 @@ require("dotenv").config();
 const cadastrarFuncionario = async (req, res) => {
   const { nome, email, senha , cpf_cnpj, data_nascimento, celular, naturalidade , cidade, endereco, cargo } = req.body;
 
-  console.log("Celular backend",celular);
-
   try {
     const funcionarioEncontrado = await knex("funcionario").where({ email }).first();
 

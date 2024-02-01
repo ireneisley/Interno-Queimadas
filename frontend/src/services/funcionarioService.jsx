@@ -24,16 +24,12 @@ async function funcionarioCargoService(cargo) {
 }
 
 async function funcionariosService() {
-  const URL = `${BASE_URL}/funcionarios`;
+  const URL = `${BASE_URL}/funcionario`;
 
   const token = localStorage.getItem('token');
 
   try {
-      const response = await axios.get(URL,{
-          headers: {
-          'Authorization': `Bearer ${token}`,
-          }
-      });
+      const response = await axios.get(URL);
     return response;
   } catch (error) {
     // Lide com erros aqui

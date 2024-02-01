@@ -5,11 +5,7 @@ async function agendarService(agendarPayload) {
   const URL = `${BASE_URL}/agendamento`;
   const token = localStorage.getItem('token');
 
-  const response = await axios.post(URL, agendarPayload, {
-    headers: {
-      'Authorization': `Bearer ${token}` // Adicione o token ao cabeçalho de autorização
-    }
-  });
+  const response = await axios.post(URL, agendarPayload);
 
   return response;
 }

@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { showToastError, showToastSuccess } from "../utils/Toastify";
 import { ArrowLeftIcon, ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import UserContext from "../context/UserContext";
-// import InputMask from 'react-input-mask';
+import InputMask from 'react-input-mask';
 
 function CadastroFuncionario() {
   const history = useHistory();
@@ -192,21 +192,14 @@ function CadastroFuncionario() {
 
               <Box w={{ base: "100%", md: "48%" }}>
                 <FormLabel htmlFor="cpfCnpj">CPF/CNPJ</FormLabel>
-                <Input 
-                  id="email" 
-                  type="text"
-                  placeholder="Seu CPF ou CNPJ"
-                  value={ cpfCnpj }
-                  onChange={ ({ target: { value } }) => setCpfCnpj(value) } 
-                />
-                {/* <InputMask
+                <InputMask
                   mask="999.999.999-99"
                   maskChar="_"
                   value={cpfCnpj}
                   onChange={({ target: { value } }) => setCpfCnpj(value)}
                 >
                   {(inputProps) => <Input {...inputProps} id="cpfCnpj" placeholder="Seu CPF ou CNPJ" />}
-                </InputMask> */}
+                </InputMask>
               </Box>
             </HStack>
 
@@ -241,22 +234,14 @@ function CadastroFuncionario() {
             >
               <Box w="100%">
                 <FormLabel htmlFor="cel">Celular</FormLabel>
-                <Input 
-                  id="cel" 
-                  type="text"
-                  placeholder="(99) 99999-9999"
-                  mask="(99) 99999-9999"
-                  value={ celular }
-                  onChange={ ({ target: { value } }) => setCelular(value) } 
-                />
-                {/* <InputMask
+                <InputMask
                   mask="(99) 99999-9999"
                   maskChar="_"
                   value={celular}
                   onChange={({ target: { value } }) => setCelular(value)}
                 >
                   {(inputProps) => <Input {...inputProps} id="cel" placeholder="Digite seu Celular" />}
-                </InputMask> */}
+                </InputMask>
               </Box>
             </HStack>
 

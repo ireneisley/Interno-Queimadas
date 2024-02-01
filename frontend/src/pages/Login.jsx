@@ -85,15 +85,15 @@ function Login() {
     }
   }
 
-  const handleCadastrar = () => {
-    history.push('/cadastro')
+  const handleAgendar = () => {
+    history.push('/')
   }
 
   return (
     <Box h="100vh" position="relative">
       {/* Imagem para telas grandes */}
       <Image
-        src="/sky.jpeg"
+        src="/phio.jpeg"
         alt="Logo"
         h={{ base: 20, md: 32 }}
         maxW="100%"
@@ -106,7 +106,7 @@ function Login() {
       <Center
         as="header"
         h={140}
-        bg="black"
+        bg="#52B587"
         color="white"
         fontWeight="bold"
         fontSize={{ base: '3xl', md: '4xl' }}
@@ -185,7 +185,7 @@ function Login() {
                   w={{ base: 150, md: 240 }}
                   p="6"
                   type="submit"
-                  bg="black" // Alteração aqui para cor preta
+                  bg="#52B587" // Alteração aqui para cor preta
                   color="white"
                   fontWeight="bold"
                   fontSize="xl"
@@ -204,7 +204,7 @@ function Login() {
                   w={{ base: 150, md: 240 }}
                   p="6"
                   type="submit"
-                  bg="black" // Alteração aqui para cor preta
+                  bg="#52B587" // Alteração aqui para cor preta
                   color="white"
                   fontWeight="bold"
                   fontSize="xl"
@@ -212,9 +212,9 @@ function Login() {
                   ml="2"
                   _hover={{ bg: "gray.900" }}
                   h="auto"
-                  onClick={ handleCadastrar }
+                  onClick={ handleAgendar }
                 >
-                  Cadastrar
+                  Agendar
                 </Button>
               </Flex>
             </HStack>

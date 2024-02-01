@@ -5,7 +5,6 @@ const clienteSchema = require("../schema/clienteSchema");
 const agendamentoSchema = require("../schema/agendamentoSchema");
 const comandaSchema = require("../schema/comandaSchema");
 const { editarFuncionario,cadastrarFuncionario, excluiFuncionario, listarFuncionarios, listarFuncionarioCargo, listarTrabalhadores} = require("../controllers/funcionario")
-const { cadastrarCliente, editarCliente, excluiCliente, listarClientes } = require("../controllers/cliente");
 const { agendar, editarAgendamento, excluiAgendamento, listarAgendamentos, listarAgendamentosBarbeiro, listarAgendamentosPorData,listarAgendamentosBarbeiroPorData } = require("../controllers/agendamento");
 const { cadastrarComanda, editarComanda, excluiComanda, listarcomandas, listarComandasPorData, faturamentoPorMes, faturamentoPorSemana} = require("../controllers/comanda");
 const { cadastrarServico, editarServico, listarServico, excluirServico, listarPrecoServico } = require("../controllers/servico")
@@ -18,20 +17,18 @@ const router = express();
 router.post("/funcionario", validarRequisicao(funcionarioSchema), cadastrarFuncionario);
 router.post("/login", validarRequisicao(loginSchema), login);
 
+router.post("/agendamento", validarRequisicao(agendamentoSchema),agendar);
+router.get("/servico",listarServico);
+router.get("/servico/preco",listarPrecoServico);
+router.get("/funcionario",listarFuncionarios);
 
 router.use(loginAutenticacao);
 router.put("/funcionario/:id", editarFuncionario);
 router.delete("/funcionario/:id", excluiFuncionario);
-router.get("/funcionario",listarFuncionarios);
-router.get("/funcionario/cargo",listarFuncionarioCargo);
 router.get("/funcionarios",listarTrabalhadores);
-//tem que ter login de adm
-router.post("/cliente", validarRequisicao(clienteSchema), cadastrarCliente);
-router.put("/cliente/:id", editarCliente);
-router.delete("/cliente/:id",excluiCliente);
-router.get("/cliente",listarClientes);
+router.get("/funcionario/cargo",listarFuncionarioCargo);
 
-router.post("/agendamento", validarRequisicao(agendamentoSchema),agendar);
+//tem que ter login de ad
 router.put("/agendamento/:id",editarAgendamento);
 router.delete("/agendamento/:id", excluiAgendamento);
 router.get("/agendamento",listarAgendamentos);
@@ -47,8 +44,7 @@ router.get("/comanda/data",listarComandasPorData);
 router.get("/comanda/semana",faturamentoPorSemana);
 router.get("/comanda/mes",faturamentoPorMes);
 
-router.get("/servico",listarServico);
-router.get("/servico/preco",listarPrecoServico);
+
 
 
 

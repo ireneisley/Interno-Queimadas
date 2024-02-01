@@ -6,7 +6,7 @@ import { agendarService } from '../services/agendarService';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { showToastError, showToastSuccess } from '../utils/Toastify';
-import { funcionarioCargoService } from '../services/funcionarioService';
+import { funcionariosService } from '../services/funcionarioService';
 import { listagemServicoService } from '../services/servicoService';
 import { ArrowLeftIcon } from '@chakra-ui/icons';
 import UserContext from '../context/UserContext';
@@ -21,7 +21,6 @@ const Agendar = () => {
   const [dataMarcacao, setDataMarcacao] = useState('');
   const [horaInicial, setHoraInicial] = useState('');
   const [horaTermino, setHoraTermino] = useState('');
-  const [cargo, setCargo] = useState('')
   const [barbeiroNome, setbarbeiroNome] = useState('');
   const [clienteNome, setclienteNome] = useState('');
   const [servicoNome, setServicoNome] = useState([])
@@ -47,14 +46,10 @@ const Agendar = () => {
     setSelectedServices(selectedServices);
   };
 
-  const handleChangeCargo = (value) => {
-    setCargo(value);
-  };
-
   useEffect(() => {
     const fetchBarbeirosOptions = async () => {
       try {
-        const response = await funcionarioCargoService({cargo});
+        const response = await funcionariosService();
 
         const barbers = response.data.map(barber => ({
           value: barber.nome,
@@ -72,17 +67,25 @@ const Agendar = () => {
     };
 
     fetchBarbeirosOptions();
-  }, [cargo]);
+  }, []);
   
   useEffect(() => {
     const fetchServicosOptions = async () => {
       try {
         const response = await listagemServicoService();
 
-        const servicos = response.data.map(servico => ({
+        const servicos = response.data.map((servico) => ({
           value: servico.nome,
-          label: servico.nome
+          label: (
+            <Box>
+              <span>{servico.nome}</span>
+              <span style={{ marginLeft: "8px", color: "gray" }}>
+                R$ {servico.preco}
+              </span>
+            </Box>
+          ),
         }));
+      
 
         setServicosOptions(servicos);
       } catch (error) {
@@ -121,17 +124,15 @@ const Agendar = () => {
     }
   }
 
-  const handleCadastroCliente = () => {
-    history.push('/cadastro-cliente')
-  }
 
   const handleAdmin = () => {
     history.push('/administrador')
   }
 
-  if (!user || user.cargo.toLowerCase() !== 'administrador') {
-    history.push('/')
+  const handleLogin = () => {
+    history.push('/login')
   }
+
 
   const formatarDataBrasileira = (data) => {
     const [ano, mes, dia] = data.split("-");
@@ -203,20 +204,6 @@ const Agendar = () => {
               <Box w="100%">
                 <CheckboxGroup defaultValue={[]} onChange={ handleServiceChange }>
                   <VStack spacing="24px" alignItems="flex-start">
-                    <Box w="100%">
-                      <FormLabel htmlFor="nome" fontWeight="bold" fontSize="xl">Tipo Funcionário</FormLabel>
-                      <RadioGroup 
-                        defaultValue="Barbeiro"
-                        value={ cargo }
-                        onChange={ handleChangeCargo }
-                      >
-                        <HStack spacing="24px">
-                          <Radio value="Barbeiro">Barbeiro</Radio>
-                          <Radio value="Manicure">Manicure</Radio>
-                          <Radio value="Cabeleireiro(a)">{ 'Cabeleireiro(a)' }</Radio>
-                        </HStack>
-                      </RadioGroup>
-                    </Box>
 
                     <Box w="100%">
                       <FormLabel htmlFor="nome" fontWeight="bold" fontSize="xl">Funcionário</FormLabel>
@@ -314,9 +301,6 @@ const Agendar = () => {
                   Agendar
                 </Button>
               </Flex>
-            </HStack>
-
-            <HStack justify="center">
               <Flex justify="space-between">
                 <Button
                   w={240}
@@ -327,11 +311,11 @@ const Agendar = () => {
                   fontWeight="bold"
                   fontSize="xl"
                   mt="2"
-                  onClick={ handleCadastroCliente }
                   _hover={{ bg: "gray.900" }}
                   h="auto"
+                  onClick={ handleLogin }
                 >
-                  Cadastrar Cliente
+                  Login
                 </Button>
               </Flex>
             </HStack>

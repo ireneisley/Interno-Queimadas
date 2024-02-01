@@ -4,7 +4,7 @@ require("dotenv").config();
 
 const cadastrarComanda = async (req, res) => {
 
-    const { barbeiroNome, clienteNome , servicoLista, preco} = req.body;
+    const { barbeiroNome, servicoLista, preco} = req.body;
   
     try {
 
@@ -35,7 +35,6 @@ const cadastrarComanda = async (req, res) => {
             funcionario_id: barbeiro.id,
             servicos: servicoLista,
             preco,
-            cliente_nome: clienteNome,
             comissao,
             total_barberia:totalBarberia
           })
@@ -49,7 +48,6 @@ const cadastrarComanda = async (req, res) => {
             funcionario_id: barbeiro.id,
             servicos: servicoLista,
             preco,
-            cliente_nome: clienteNome,
             comissao,
             total_barberia:totalBarberia
           })
@@ -72,13 +70,12 @@ const cadastrarComanda = async (req, res) => {
 
     const { id } = req.params;
     console.log("Id",id);
-    const { barbeiroNome, clienteNome, servicoLista, preco } = req.body;
+    const { barbeiroNome, servicoLista, preco } = req.body;
   
     try {
       // Cria um objeto com os dados não nulos ou vazios
       const dadosAtualizados = {
         barbeiroNome,
-        clienteNome,
         servicoLista,
         preco
       };
