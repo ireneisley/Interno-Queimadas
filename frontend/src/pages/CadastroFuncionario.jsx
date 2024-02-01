@@ -73,7 +73,7 @@ function CadastroFuncionario() {
     <Box h="100vh" position="relative">
       {/* Imagem para telas grandes */}
       <Image
-        src="/sky.jpeg"
+        src="/phio.jpeg"
         alt="Logo"
         h={{ base: 16, md: 32 }}
         maxW="100%"
@@ -102,7 +102,7 @@ function CadastroFuncionario() {
       <Center
         as="header"
         h={140}
-        bg="black"
+        bg="#52B587"
         color="white"
         fontWeight="bold"
         fontSize={{ base: 'xl', md: '4xl' }}
@@ -167,7 +167,7 @@ function CadastroFuncionario() {
                   bottom="1.5" 
                   h="1.75rem" 
                   size="sm"
-                  bg="gray.400"
+                  bg="#52B587"
                   color="black"
                   _hover={{ 
                     bg: "gray.500",
@@ -299,7 +299,7 @@ function CadastroFuncionario() {
                   w={{ base: 120, md: 240 }}
                   p="6"
                   type="submit"
-                  bg="black"
+                  bg="#52B587"
                   color="white"
                   fontWeight="bold"
                   fontSize="xl"

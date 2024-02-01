@@ -56,7 +56,7 @@ const Financeiro = () => {
     <Box h="100vh" position="relative">
       {/* Logo */}
       <Image 
-        src="/sky.jpeg" 
+        src="/phio.jpeg" 
         alt="Logo" 
         h={{ base: 20, md: 32 }} 
         position="absolute" 
@@ -84,7 +84,7 @@ const Financeiro = () => {
       <Center
         as="header"
         h={130}
-        bg="black"
+        bg="#52B587"
         color="white"
         fontWeight="bold"
         fontSize={{ base: 'xl', md: '4xl' }}

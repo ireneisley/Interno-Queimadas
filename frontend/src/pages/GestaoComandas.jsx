@@ -77,7 +77,7 @@ function GestaoComandas(){
       <Box h="100vh" position="relative">
         {/* Imagem para telas grandes */}
         <Image
-          src="/sky.jpeg"
+          src="/phio.jpeg"
           alt="Logo"
           h={{ base: 16, md: 32 }}
           maxW="100%"
@@ -106,7 +106,7 @@ function GestaoComandas(){
         <Center
           as="header"
           h={140}
-          bg="black"
+          bg="#52B587"
           color="white"
           fontWeight="bold"
           fontSize={{ base: 'xl', md: '4xl' }}
