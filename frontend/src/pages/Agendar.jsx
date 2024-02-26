@@ -144,7 +144,7 @@ const Agendar = () => {
     <Box h="100vh" position="relative">
       {/* Imagem para telas grandes */}
       <Image
-        src="/phio.jpeg"
+        src="/queimadastour.png"
         alt="Logo"
         h={{ base: 20, md: 32 }}
         maxW="100%"
@@ -158,7 +158,7 @@ const Agendar = () => {
         w={{ base: 70, md: 0 }}
         p="4"
         type="button"
-        bg="#52B587"
+        bg="orange.500"
         color="white"
         _hover={{ bg: "blue.500" }}
         position="absolute"
@@ -173,7 +173,7 @@ const Agendar = () => {
       <Center
         as="header"
         h={140}
-        bg="#52B587"
+        bg="orange.500"
         color="white"
         fontWeight="bold"
         fontSize={{ base: '2xl', md: '4xl' }}
@@ -290,7 +290,7 @@ const Agendar = () => {
                   w={240}
                   p="6"
                   type="submit"
-                  bg="#52B587" //botão verde
+                  bg="orange.500" 
                   color="white"
                   fontWeight="bold"
                   fontSize="xl"
@@ -307,18 +307,19 @@ const Agendar = () => {
                   w={240}
                   p="6"
                   type="submit"
-                  bg="#52B587" //botão verde
+                  bg="orange.500" 
                   color="white"
                   fontWeight="bold"
                   fontSize="xl"
                   mt="2"
                   _hover={{ bg: "gray.900" }}
                   h="auto"
-                  onClick={ handleLogin }
+                  onClick={ createNewScheduling }
                 >
                   Login
                 </Button>
               </Flex>
+              
             </HStack>
           </FormControl>
         </Center>

@@ -84,7 +84,7 @@ function GestaoClientes (){
       <Box h="100vh" position="relative">
         {/* Imagem para telas grandes */}
         <Image
-          src="/sky.jpeg"
+          src="/queimadastour.png"
           alt="Logo"
           h={{ base: 20, md: 32 }}
           maxW="100%"

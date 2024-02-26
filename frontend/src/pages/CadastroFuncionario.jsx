@@ -73,7 +73,7 @@ function CadastroFuncionario() {
     <Box h="100vh" position="relative">
       {/* Imagem para telas grandes */}
       <Image
-        src="/phio.jpeg"
+        src="/queimadastour.png"
         alt="Logo"
         h={{ base: 16, md: 32 }}
         maxW="100%"
@@ -87,7 +87,7 @@ function CadastroFuncionario() {
         // w={200}
         p="4"
         type="button"
-        bg="gray.900"
+        bg="#fc6103"
         color="white"
         _hover={{ bg: "blue.500" }}
         position="absolute"
@@ -102,7 +102,7 @@ function CadastroFuncionario() {
       <Center
         as="header"
         h={140}
-        bg="#52B587"
+        bg="#fc6103"
         color="white"
         fontWeight="bold"
         fontSize={{ base: 'xl', md: '4xl' }}
@@ -145,7 +145,7 @@ function CadastroFuncionario() {
                 <Input 
                   id="nome"
                   type="text"
-                  placeholder="Digite seu Nome"
+                  placeholder="Digite seu Nome Completo"
                   value={ nome }
                   onChange={ ({ target: { value } }) => setNome(value) }
                 />
@@ -167,7 +167,7 @@ function CadastroFuncionario() {
                   bottom="1.5" 
                   h="1.75rem" 
                   size="sm"
-                  bg="#52B587"
+                  bg="#fc6103"
                   color="black"
                   _hover={{ 
                     bg: "gray.500",
@@ -191,14 +191,14 @@ function CadastroFuncionario() {
               </Box>
 
               <Box w={{ base: "100%", md: "48%" }}>
-                <FormLabel htmlFor="cpfCnpj">CPF/CNPJ</FormLabel>
+                <FormLabel htmlFor="cpfCnpj">CPF</FormLabel>
                 <InputMask
                   mask="999.999.999-99"
                   maskChar="_"
                   value={cpfCnpj}
                   onChange={({ target: { value } }) => setCpfCnpj(value)}
                 >
-                  {(inputProps) => <Input {...inputProps} id="cpfCnpj" placeholder="Seu CPF ou CNPJ" />}
+                  {(inputProps) => <Input {...inputProps} id="cpfCnpj" placeholder="Digite seu CPF" />}
                 </InputMask>
               </Box>
             </HStack>
@@ -207,40 +207,21 @@ function CadastroFuncionario() {
               flexWrap="wrap"
               spacing={{ base: "2", md: "4" }}
             >
-              <Box w={{ base: "100%", md: "48%" }}>
-                <FormLabel htmlFor="nasc">Data de Nascimento</FormLabel>
-                <Input 
-                  id="nasc" 
-                  type="date"
-                  value={ dataNascimento }
-                  onChange={ ({ target: { value } }) => setDataNascimento(value) }
-                />
-              </Box>
-
-              <Box w={{ base: "100%", md: "48%" }}>
-                <FormLabel htmlFor="natural">Naturalidade</FormLabel>
-                <Input 
-                  id="natural"
-                  type="text"
-                  placeholder="Digite sua cidade natal"
-                  value={ naturalidade }
-                  onChange={ ({ target: { value } }) => setNaturalidade(value) }
-                />
-              </Box>
+              
             </HStack>
 
             <HStack 
               spacing="4"
             >
               <Box w="100%">
-                <FormLabel htmlFor="cel">Celular</FormLabel>
+                <FormLabel htmlFor="cel">Whatsapp</FormLabel>
                 <InputMask
                   mask="(99) 99999-9999"
                   maskChar="_"
                   value={celular}
                   onChange={({ target: { value } }) => setCelular(value)}
                 >
-                  {(inputProps) => <Input {...inputProps} id="cel" placeholder="Digite seu Celular" />}
+                  {(inputProps) => <Input {...inputProps} id="cel" placeholder="Digite o número" />}
                 </InputMask>
               </Box>
             </HStack>
@@ -250,48 +231,28 @@ function CadastroFuncionario() {
               spacing={{ base: "2", md: "4" }}
             >
               <Box w={{ base: "100%", md: "48%" }}>
-                <FormLabel htmlFor="endereco">Endereço</FormLabel>
+                <FormLabel htmlFor="endereco">RG</FormLabel>
                 <Input 
                   id="endereco"
                   type="text"
-                  placeholder="Digite seu Endereço"
+                  placeholder="Digite seu RG"
                   value={ endereco }
                   onChange={ ({ target: { value } }) => setEndereco(value) }
                 />
               </Box>
 
               <Box w={{ base: "100%", md: "48%" }}>
-                <FormLabel htmlFor="cidade">Cidade</FormLabel>
+                <FormLabel htmlFor="cidade">Órgão Expeditor</FormLabel>
                 <Input 
                   id="cidade"
                   type="text"
-                  placeholder="Cidade onde reside"
+                  placeholder="Digite o Órgão Expeditor"
                   value={ cidade }
                   onChange={ ({ target: { value } }) => setCidade(value) }
                 />
               </Box>
             </HStack>
 
-            <HStack spacing="4">
-              <Box w="100%">
-                <FormLabel>Cargo</FormLabel>
-                <RadioGroup 
-                  defaultValue="Administrador"
-                  value={ cargo }
-                  onChange={ (value) => setCargo(value) }
-                >
-                  <HStack 
-                    spacing="14px"
-                    flexWrap="wrap"
-                  >
-                    <Radio value="Administrador">Administrador</Radio>
-                    <Radio value="Barbeiro">Barbeiro</Radio>
-                    <Radio value="Manicure">Manicure</Radio>
-                    <Radio value="Cabeleireiro(a)">{ 'Cabeleireiro(a)' }</Radio>
-                  </HStack>
-                </RadioGroup>
-              </Box>
-            </HStack>
 
             <HStack justify="center">
               <Flex justify="space-between">
@@ -299,7 +260,7 @@ function CadastroFuncionario() {
                   w={{ base: 120, md: 240 }}
                   p="6"
                   type="submit"
-                  bg="#52B587"
+                  bg="#fc6103"
                   color="white"
                   fontWeight="bold"
                   fontSize="xl"

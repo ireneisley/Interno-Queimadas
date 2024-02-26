@@ -56,7 +56,7 @@ const Financeiro = () => {
     <Box h="100vh" position="relative">
       {/* Logo */}
       <Image 
-        src="/phio.jpeg" 
+        src="/queimadastour.png" 
         alt="Logo" 
         h={{ base: 20, md: 32 }} 
         position="absolute" 
@@ -70,7 +70,7 @@ const Financeiro = () => {
         w={{ base: 70, md: 0 }}
         p="4"
         type="button"
-        bg="gray.900"
+        bg="#52B587"
         color="white"
         _hover={{ bg: "blue.500" }}
         position="absolute"

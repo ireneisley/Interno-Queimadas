@@ -42,7 +42,7 @@ function Admin() {
     <Box h="100vh" position="relative">
       {/* Logo */}
       <Image 
-        src="/phio.jpeg" 
+        src="/queimadastour.png" 
         alt="Logo" 
         h={{ base: 20, md: 32 }}
         maxW="100%"
@@ -57,7 +57,7 @@ function Admin() {
         w={{ base: 90, md: 200 }}
         p="6"
         type="button"
-        bg="#52B587"
+        bg="#fc6103"
         color="white"
         fontWeight="bold"
         fontSize="xl"
@@ -78,7 +78,7 @@ function Admin() {
       <Center
         as="header"
         h={140}
-        bg="#52B587"
+        bg="#fc6103"
         color="white"
         fontWeight="bold"
         fontSize={{ base: '2xl', md: '4xl' }}
@@ -116,7 +116,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="#52B587" // Alteração aqui para cor preta
+                bg="#fc6103"
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -126,7 +126,7 @@ function Admin() {
                 h="auto"
                 onClick={ handleCadastroFuncionarios }
               >
-                Cadastrar Funcionários
+                Descrição de Viagem
               </Button>
             </HStack>
 
@@ -135,7 +135,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="#52B587" // Alteração aqui para cor preta
+                bg="#fc6103"
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -145,7 +145,7 @@ function Admin() {
                 h="auto"
                 onClick={ handleComanda }
               >
-                Gestão Comandas
+                Edição de Portfólio
               </Button>
             </HStack>
 
@@ -154,7 +154,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="#52B587" // Alteração aqui para cor preta
+                bg="#fc6103"
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -163,6 +163,25 @@ function Admin() {
                 _hover={{ bg: "gray.900" }}
                 h="auto"
                 onClick={ handleFinanceiro }
+              >
+                Gestão de Viagem
+              </Button>
+            </HStack>
+
+            <HStack spacing="4" justify="center">
+              <Button
+                w={240}
+                p="6"
+                type="submit"
+                bg="#fc6103" 
+                color="white"
+                fontWeight="bold"
+                fontSize="xl"
+                mt="2"
+                ml="2"
+                _hover={{ bg: "gray.900" }}
+                h="auto"
+                onClick={ handleGestaoUsuarios }
               >
                 Financeiro
               </Button>
@@ -173,26 +192,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="#52B587" // Alteração aqui para cor preta
-                color="white"
-                fontWeight="bold"
-                fontSize="xl"
-                mt="2"
-                ml="2"
-                _hover={{ bg: "gray.900" }}
-                h="auto"
-                onClick={ handleGestaoUsuarios }
-              >
-                Gestão de Usuários
-              </Button>
-            </HStack>
-
-            <HStack spacing="4" justify="center">
-              <Button
-                w={240}
-                p="6"
-                type="submit"
-                bg="#52B587" // Alteração aqui para cor preta
+                bg="#fc6103"
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -211,7 +211,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="#52B587" // Alteração aqui para cor preta
+                bg="#fc6103" 
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"

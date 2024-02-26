@@ -93,7 +93,7 @@ function Login() {
     <Box h="100vh" position="relative">
       {/* Imagem para telas grandes */}
       <Image
-        src="/phio.jpeg"
+        src="/queimadastour.png"
         alt="Logo"
         h={{ base: 20, md: 32 }}
         maxW="100%"
@@ -106,7 +106,7 @@ function Login() {
       <Center
         as="header"
         h={140}
-        bg="#52B587"
+        bg="orange.500"
         color="white"
         fontWeight="bold"
         fontSize={{ base: '3xl', md: '4xl' }}
@@ -185,7 +185,7 @@ function Login() {
                   w={{ base: 150, md: 240 }}
                   p="6"
                   type="submit"
-                  bg="#52B587" // Alteração aqui para cor preta
+                  bg="orange.500"
                   color="white"
                   fontWeight="bold"
                   fontSize="xl"
@@ -204,7 +204,7 @@ function Login() {
                   w={{ base: 150, md: 240 }}
                   p="6"
                   type="submit"
-                  bg="#52B587" // Alteração aqui para cor preta
+                  bg="orange.500"
                   color="white"
                   fontWeight="bold"
                   fontSize="xl"
