@@ -103,10 +103,7 @@ function Agendamentos() {
     fetchAgendamentos();
   }, []); 
 
-  if (!user || user.cargo.toLowerCase() !== 'administrador') {
-    history.push('/')
-  }
-
+ 
 //------------------------------------------------------------------------ return -------------------------------------------------
   return (
     <Box h="100vh" position="relative">

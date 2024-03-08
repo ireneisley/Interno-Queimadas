@@ -72,9 +72,6 @@ function GestaoUsuarios() {
     history.push('/administrador')
   }
 
-  if (!user || user.cargo.toLowerCase() !== 'administrador') {
-    history.push('/')
-  }
 
 //------------------------------------------------------------------------ return -------------------------------------------------
   return (

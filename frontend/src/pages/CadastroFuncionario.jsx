@@ -65,9 +65,7 @@ function CadastroFuncionario() {
     history.push('/administrador')
   }
 
-  if (!user || user.cargo.toLowerCase() !== 'administrador') {
-    history.push('/')
-  }
+ 
 
   return (
     <Box h="100vh" position="relative">

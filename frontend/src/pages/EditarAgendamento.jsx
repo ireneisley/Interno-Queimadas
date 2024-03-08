@@ -124,10 +124,6 @@ function EditarAgendamento() {
     history.push('/')
   }
 
-  if (!user) {
-    history.push('/')
-  }
-
   return (
     <div>
       <Box h="100vh" position="relative">

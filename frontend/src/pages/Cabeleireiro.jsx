@@ -31,9 +31,6 @@ function Cabeleireiro() {
     history.push('/comanda')
   }
 
-  if (!user || user.cargo.toLowerCase() !== 'cabeleireiro(a)') {
-    history.push('/')
-  }
 
   return (
     <Box h="100vh" position="relative">

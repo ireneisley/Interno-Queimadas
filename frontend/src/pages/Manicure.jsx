@@ -31,9 +31,7 @@ function Manicure() {
     history.push('/comanda')
   }
 
-  if (!user || user.cargo.toLowerCase() !== 'manicure') {
-    history.push('/')
-  }
+
 
   return (
     <Box h="100vh" position="relative">

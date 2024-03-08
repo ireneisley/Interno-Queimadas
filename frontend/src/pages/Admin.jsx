@@ -34,9 +34,6 @@ function Admin() {
     history.push('/')
   }
 
-  if (!user || user.cargo.toLowerCase() !== 'administrador') {
-    history.push('/')
-  }
 
   return (
     <Box h="100vh" position="relative">
@@ -57,7 +54,7 @@ function Admin() {
         w={{ base: 90, md: 200 }}
         p="6"
         type="button"
-        bg="#fc6103"
+        bg="#E9864F"
         color="white"
         fontWeight="bold"
         fontSize="xl"
@@ -78,7 +75,7 @@ function Admin() {
       <Center
         as="header"
         h={140}
-        bg="#fc6103"
+        bg="#E9864F"
         color="white"
         fontWeight="bold"
         fontSize={{ base: '2xl', md: '4xl' }}
@@ -116,7 +113,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="#fc6103"
+                bg="#E9864F"
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -135,7 +132,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="#fc6103"
+                bg="#E9864F"
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -154,7 +151,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="#fc6103"
+                bg="#E9864F"
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -173,7 +170,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="#fc6103" 
+                bg="#E9864F" 
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -192,7 +189,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="#fc6103"
+                bg="#E9864F"
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -211,7 +208,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="#fc6103" 
+                bg="#E9864F" 
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"

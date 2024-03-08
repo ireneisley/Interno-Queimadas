@@ -66,10 +66,6 @@ function GestaoComandas(){
     history.push('/administrador')
   }
 
-  if (!user || user.cargo.toLowerCase() !== 'administrador') {
-    history.push('/')
-  }
-
   //------------------------------------------------------------------------ return -------------------------------------------------
 
   return (

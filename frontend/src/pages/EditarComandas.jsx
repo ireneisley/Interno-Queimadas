@@ -92,9 +92,6 @@ function EditarComandas() {
     history.push('/')
   }
 
-  if (!user || user.cargo.toLowerCase() !== 'administrador') {
-    history.push('/')
-  }
 
   return (
     <div>

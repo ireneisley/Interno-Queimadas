@@ -40,9 +40,7 @@ function Barbeiros() {
   //   history.push('/')
   // }
 
-  if (!user || user.cargo.toLowerCase() !== 'barbeiro') {
-    history.push('/')
-  }
+
 
   return (
     <Box h="100vh" position="relative">
