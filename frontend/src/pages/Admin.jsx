@@ -122,7 +122,7 @@ function Admin() {
                 h="auto"
                 onClick={ handleAgendar }
               >
-                Cadastro de Funcionários
+                Controle de Mapa
               </Button>
             </HStack>
             
@@ -141,7 +141,7 @@ function Admin() {
                 h="auto"
                 onClick={ handleCadastroFuncionarios }
               >
-                Controle de Mapa
+                Cadastro de Funcionários
               </Button>
             </HStack>
 
@@ -179,7 +179,7 @@ function Admin() {
                 h="auto"
                 onClick={ handleFinanceiro }
               >
-                Edição de Página
+                Financeiro
               </Button>
             </HStack>
 
@@ -198,7 +198,7 @@ function Admin() {
                 h="auto"
                 onClick={ handleGestaoUsuarios }
               >
-                Financeiro
+                Edição de Página
               </Button>
             </HStack>
 

@@ -87,7 +87,7 @@ function Barbeiros() {
         pb="8"
       >
         {/* Título para telas grandes */}
-        Barbeiro
+        Colaborador
       </Center>
 
       <Flex 
@@ -123,7 +123,7 @@ function Barbeiros() {
                 h="auto"
                 onClick={() => handleAgendar(id)}
               >
-                Agendamentos
+                Controle de mapa
               </Button>
             </HStack>
 
@@ -142,7 +142,7 @@ function Barbeiros() {
                 h="auto"
                 onClick={ handleComandas }
               >
-                Comandas
+                Viagens
               </Button>
             </HStack>
 

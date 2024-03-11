@@ -180,7 +180,7 @@ const Agendar = () => {
         pb="8"
       >
         {/* Título para telas grandes */}
-        Agendar
+        Vendas
       </Center>
 
       <Flex 
@@ -207,7 +207,7 @@ const Agendar = () => {
                   <VStack spacing="24px" alignItems="flex-start">
 
                     <Box w="100%">
-                      <FormLabel htmlFor="nome" fontWeight="bold" fontSize="xl">Funcionário</FormLabel>
+                      <FormLabel htmlFor="nome" fontWeight="bold" fontSize="xl">Viagens</FormLabel>
                       <Select
                         options={ barbeirosOptions }
                         onChange={ handleSelectChangeBarbeiro }
@@ -224,12 +224,6 @@ const Agendar = () => {
                         />
                     </Box>
 
-                    <Box w="100%">
-                      <FormLabel htmlFor="nome" fontWeight="bold" fontSize="xl">Serviços</FormLabel>
-                      <Select options={ servicosOptions } 
-                        isMulti
-                        onChange={ handleSelectChange }/>
-                    </Box>
 
                     <Box w="100%">
                       <FormLabel htmlFor="telefone" fontWeight="bold" fontSize="xl">Telefone</FormLabel>
@@ -251,26 +245,9 @@ const Agendar = () => {
                       </InputMask>
                     </Box>
 
-                    <Box w="100%">
-                      <FormLabel htmlFor="startTime" fontWeight="bold" fontSize="xl">Hora de Início</FormLabel>
-                      <Input 
-                        type="time"
-                        value={ horaInicial }
-                        onChange={ ({ target: { value } }) => setHoraInicial(value) } 
-                      />
-                    </Box>
-
-                    <Box w="100%">
-                      <FormLabel htmlFor="endTime" fontWeight="bold" fontSize="xl">Hora de Término</FormLabel>
-                      <Input 
-                        type="time"
-                        value={ horaTermino }
-                        onChange={ ({ target: { value } }) => setHoraTermino(value) } 
-                      />
-                    </Box>
 
                     <Box w="100%" >
-                      <FormLabel htmlFor="nasc" fontWeight="bold" fontSize="xl">AGENDAR</FormLabel>
+                      <FormLabel htmlFor="nasc" fontWeight="bold" fontSize="xl">Data</FormLabel>
                       <Input 
                         id="nasc" 
                         type="date"

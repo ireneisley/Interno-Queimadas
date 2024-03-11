@@ -109,7 +109,7 @@ function GestaoComandas(){
           pb="8"
         >
           {/* Título para telas grandes */}
-          Gestão de Comandas
+          Descrição de Viagem
         </Center>
 
         <Flex 
