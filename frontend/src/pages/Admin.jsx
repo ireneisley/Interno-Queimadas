@@ -54,7 +54,7 @@ function Admin() {
         w={{ base: 90, md: 200 }}
         p="6"
         type="button"
-        bg="#E9864F"
+        bg="#E68854"
         color="white"
         fontWeight="bold"
         fontSize="xl"
@@ -75,7 +75,7 @@ function Admin() {
       <Center
         as="header"
         h={140}
-        bg="#E9864F"
+        bg="#E68854"
         color="white"
         fontWeight="bold"
         fontSize={{ base: '2xl', md: '4xl' }}
@@ -107,13 +107,31 @@ function Admin() {
             flexDir="column" 
             gap="4"
           >
-
             <HStack spacing="4" justify="center">
               <Button
                 w={240}
                 p="6"
                 type="submit"
-                bg="#E9864F"
+                bg="#E68854" 
+                color="white"
+                fontWeight="bold"
+                fontSize="xl"
+                mt="2"
+                ml="2"
+                _hover={{ bg: "gray.900" }}
+                h="auto"
+                onClick={ handleAgendar }
+              >
+                Cadastro de Funcionários
+              </Button>
+            </HStack>
+            
+            <HStack spacing="4" justify="center">
+              <Button
+                w={240}
+                p="6"
+                type="submit"
+                bg="#E68854"
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -122,6 +140,25 @@ function Admin() {
                 _hover={{ bg: "gray.900" }}
                 h="auto"
                 onClick={ handleCadastroFuncionarios }
+              >
+                Controle de Mapa
+              </Button>
+            </HStack>
+
+            <HStack spacing="4" justify="center">
+              <Button
+                w={240}
+                p="6"
+                type="submit"
+                bg="#E68854"
+                color="white"
+                fontWeight="bold"
+                fontSize="xl"
+                mt="2"
+                ml="2"
+                _hover={{ bg: "gray.900" }}
+                h="auto"
+                onClick={ handleComanda }
               >
                 Descrição de Viagem
               </Button>
@@ -132,26 +169,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="#E9864F"
-                color="white"
-                fontWeight="bold"
-                fontSize="xl"
-                mt="2"
-                ml="2"
-                _hover={{ bg: "gray.900" }}
-                h="auto"
-                onClick={ handleComanda }
-              >
-                Edição de Portfólio
-              </Button>
-            </HStack>
-
-            <HStack spacing="4" justify="center">
-              <Button
-                w={240}
-                p="6"
-                type="submit"
-                bg="#E9864F"
+                bg="#E68854"
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -161,7 +179,7 @@ function Admin() {
                 h="auto"
                 onClick={ handleFinanceiro }
               >
-                Gestão de Viagem
+                Edição de Página
               </Button>
             </HStack>
 
@@ -170,7 +188,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="#E9864F" 
+                bg="#E68854" 
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -189,7 +207,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="#E9864F"
+                bg="#E68854"
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -199,7 +217,7 @@ function Admin() {
                 h="auto"
                 onClick={ handleAgendamentos }
               >
-                Agendamentos
+                Ticket
               </Button>
             </HStack>
 
@@ -208,7 +226,7 @@ function Admin() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="#E9864F" 
+                bg="#E68854" 
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -218,9 +236,11 @@ function Admin() {
                 h="auto"
                 onClick={ handleAgendar }
               >
-                Agendar
+                Vendas
               </Button>
             </HStack>
+
+          
 
             {/* <HStack justify="center">
               <Flex justify="space-between">

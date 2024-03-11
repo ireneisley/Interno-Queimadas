@@ -106,7 +106,7 @@ function Login() {
       <Center
         as="header"
         h={140}
-        bg="orange.500"
+        bg="#E68854"
         color="white"
         fontWeight="bold"
         fontSize={{ base: '3xl', md: '4xl' }}
@@ -185,7 +185,7 @@ function Login() {
                   w={{ base: 150, md: 240 }}
                   p="6"
                   type="submit"
-                  bg="orange.500"
+                  bg="#E68854"
                   color="white"
                   fontWeight="bold"
                   fontSize="xl"
@@ -204,7 +204,7 @@ function Login() {
                   w={{ base: 150, md: 240 }}
                   p="6"
                   type="submit"
-                  bg="orange.500"
+                  bg="#E68854"
                   color="white"
                   fontWeight="bold"
                   fontSize="xl"

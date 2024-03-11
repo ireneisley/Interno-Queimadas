@@ -65,7 +65,6 @@ function CadastroFuncionario() {
     history.push('/administrador')
   }
 
- 
 
   return (
     <Box h="100vh" position="relative">
@@ -100,7 +99,7 @@ function CadastroFuncionario() {
       <Center
         as="header"
         h={140}
-        bg="#fc6103"
+        bg="#E68854"
         color="white"
         fontWeight="bold"
         fontSize={{ base: 'xl', md: '4xl' }}
@@ -165,7 +164,7 @@ function CadastroFuncionario() {
                   bottom="1.5" 
                   h="1.75rem" 
                   size="sm"
-                  bg="#fc6103"
+                  bg="#E68854"
                   color="black"
                   _hover={{ 
                     bg: "gray.500",
@@ -258,7 +257,7 @@ function CadastroFuncionario() {
                   w={{ base: 120, md: 240 }}
                   p="6"
                   type="submit"
-                  bg="#fc6103"
+                  bg="#E68854"
                   color="white"
                   fontWeight="bold"
                   fontSize="xl"
