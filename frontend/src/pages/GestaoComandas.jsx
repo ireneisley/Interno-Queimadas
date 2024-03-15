@@ -73,7 +73,7 @@ function GestaoComandas(){
       <Box h="100vh" position="relative">
         {/* Imagem para telas grandes */}
         <Image
-          src="/phio.jpeg"
+          src="/queimadastour.png"
           alt="Logo"
           h={{ base: 16, md: 32 }}
           maxW="100%"
@@ -87,7 +87,7 @@ function GestaoComandas(){
         // w={200}
         p="4"
         type="button"
-        bg="gray.900"
+        bg="#E68854"
         color="white"
         _hover={{ bg: "blue.500" }}
         position="absolute"
@@ -102,7 +102,7 @@ function GestaoComandas(){
         <Center
           as="header"
           h={140}
-          bg="#52B587"
+          bg="#E68854"
           color="white"
           fontWeight="bold"
           fontSize={{ base: 'xl', md: '4xl' }}

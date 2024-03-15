@@ -84,7 +84,7 @@ function CadastroFuncionario() {
         // w={200}
         p="4"
         type="button"
-        bg="#fc6103"
+        bg="#E68854"
         color="white"
         _hover={{ bg: "blue.500" }}
         position="absolute"

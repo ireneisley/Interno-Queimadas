@@ -108,7 +108,7 @@ function Agendamentos() {
   return (
     <Box h="100vh" position="relative">
       <Image 
-        src="/phio.jpeg" 
+        src="/queimadastour.png" 
         alt="Logo" 
         h={{ base: 16, md: 32 }} 
         position="absolute" 
@@ -121,7 +121,7 @@ function Agendamentos() {
         w={{ base: 70, md: 0 }}
         p="4"
         type="button"
-        bg="#52B587"
+        bg="#E68854"
         color="white"
         _hover={{ bg: "blue.500" }}
         position="absolute"
@@ -136,7 +136,7 @@ function Agendamentos() {
       <Center
         as="header"
         h={150}
-        bg="#52B587"
+        bg="#E68854"
         color="white"
         fontWeight="bold"
         fontSize={{ base: '2xl', md: '4xl' }}
@@ -220,7 +220,7 @@ function Agendamentos() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="#52B587"
+                bg="#E68854"
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"
@@ -239,7 +239,7 @@ function Agendamentos() {
                 w={240}
                 p="6"
                 type="submit"
-                bg="#52B587"
+                bg="#E68854"
                 color="white"
                 fontWeight="bold"
                 fontSize="xl"

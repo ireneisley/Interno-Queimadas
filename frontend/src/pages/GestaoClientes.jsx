@@ -94,7 +94,7 @@ function GestaoClientes (){
         w={{ base: 70, md: 0 }}
         p="4"
         type="button"
-        bg="gray.900"
+        bg="#E68854"
         color="white"
         _hover={{ bg: "blue.500" }}
         position="absolute"
@@ -109,7 +109,7 @@ function GestaoClientes (){
         <Center
           as="header"
           h={140}
-          bg="black"
+          bg="#E68854"
           color="white"
           fontWeight="bold"
           fontSize={{ base: 'xl', md: '4xl' }}

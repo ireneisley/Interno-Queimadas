@@ -158,7 +158,7 @@ const Agendar = () => {
         w={{ base: 70, md: 0 }}
         p="4"
         type="button"
-        bg="orange.500"
+        bg="#E68854"
         color="white"
         _hover={{ bg: "blue.500" }}
         position="absolute"
@@ -173,7 +173,7 @@ const Agendar = () => {
       <Center
         as="header"
         h={140}
-        bg="orange.500"
+        bg="#E68854"
         color="white"
         fontWeight="bold"
         fontSize={{ base: '2xl', md: '4xl' }}
@@ -267,7 +267,7 @@ const Agendar = () => {
                   w={240}
                   p="6"
                   type="submit"
-                  bg="orange.500" 
+                  bg="#E68854" 
                   color="white"
                   fontWeight="bold"
                   fontSize="xl"
@@ -284,7 +284,7 @@ const Agendar = () => {
                   w={240}
                   p="6"
                   type="submit"
-                  bg="orange.500" 
+                  bg="#E68854" 
                   color="white"
                   fontWeight="bold"
                   fontSize="xl"

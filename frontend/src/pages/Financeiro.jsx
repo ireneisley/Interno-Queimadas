@@ -67,7 +67,7 @@ const Financeiro = () => {
         w={{ base: 70, md: 0 }}
         p="4"
         type="button"
-        bg="#52B587"
+        bg="#E68854"
         color="white"
         _hover={{ bg: "blue.500" }}
         position="absolute"
@@ -81,7 +81,7 @@ const Financeiro = () => {
       <Center
         as="header"
         h={130}
-        bg="#52B587"
+        bg="#E68854"
         color="white"
         fontWeight="bold"
         fontSize={{ base: 'xl', md: '4xl' }}
