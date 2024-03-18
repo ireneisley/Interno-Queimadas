@@ -3,10 +3,9 @@ import { useHistory } from 'react-router-dom';
 import { useContext } from "react";
 import UserContext from "../context/UserContext";
 import React from 'react';
- 
 
-//50 poltronas
-function Mapas() {
+//31 poltronas (tá faltando só a poltrona 31 no meio)
+function Mapas3() {
   const history = useHistory();
   const { user, logOut } = useContext(UserContext);
 
@@ -36,15 +35,15 @@ function Mapas() {
 
   // Array com os textos dos botões
   const buttonLabels = [
-    "03", "07", "11", "15", "19",
-    "23", "27", "31", "35", "39",
-    "43", "47", "04", "08", "12",
-    "16", "20", "24", "28", "32",
+    "05", "09", "13", "17", "21",
+    "25", "29", "", "35", "39",
+    "43", "47", "06", "10", "14",
+    "18", "22", "26", "30", "32",
     "36", "40", "44", "48", "02",
-    "06", "10", "14", "18", "22",
-    "26", "30", "34", "38", "42",
-    "46", "50", "01", "05", "09",
-    "13", "17", "21", "25", "29",
+    "04", "08", "12", "16", "20",
+    "24", "28", "34", "38", "42",
+    "46", "50", "01", "03", "07",
+    "11", "15", "19", "23", "27",
     "33", "37", "41", "45", "49",
   ];
 
@@ -118,7 +117,7 @@ function Mapas() {
         >
           {/* Primeira linha com 12 botões */}
           <Flex justifyContent="center" mt={2}>
-            {[...Array(12)].map((_, colIndex) => (
+            {[...Array(7)].map((_, colIndex) => (
               <Button
                 key={colIndex}
                 p="1"
@@ -139,7 +138,7 @@ function Mapas() {
           </Flex>
           {/* Segunda linha com 12 botões */}
           <Flex justifyContent="center" mt={2}>
-            {[...Array(12)].map((_, colIndex) => (
+            {[...Array(7)].map((_, colIndex) => (
               <Button
                 key={colIndex + 12}
                 p="1"
@@ -162,7 +161,7 @@ function Mapas() {
           <Box mt={8}></Box>
           {/* Terceira linha com 13 botões */}
           <Flex justifyContent="center" mt={2}>
-            {[...Array(13)].map((_, colIndex) => (
+            {[...Array(8)].map((_, colIndex) => (
               <Button
                 key={colIndex + 24}
                 p="1"
@@ -183,7 +182,7 @@ function Mapas() {
           </Flex>
           {/* Quarta linha com 13 botões */}
           <Flex justifyContent="center" mt={2}>
-            {[...Array(13)].map((_, colIndex) => (
+            {[...Array(8)].map((_, colIndex) => (
               <Button
                 key={colIndex + 37}
                 p="1"
@@ -208,4 +207,4 @@ function Mapas() {
   );
 }
 
-export default Mapas;
+export default Mapas3;

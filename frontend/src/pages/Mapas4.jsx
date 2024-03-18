@@ -3,10 +3,9 @@ import { useHistory } from 'react-router-dom';
 import { useContext } from "react";
 import UserContext from "../context/UserContext";
 import React from 'react';
- 
 
-//50 poltronas
-function Mapas() {
+//44 poltronas
+function Mapas4() {
   const history = useHistory();
   const { user, logOut } = useContext(UserContext);
 
@@ -118,7 +117,7 @@ function Mapas() {
         >
           {/* Primeira linha com 12 botões */}
           <Flex justifyContent="center" mt={2}>
-            {[...Array(12)].map((_, colIndex) => (
+            {[...Array(10)].map((_, colIndex) => (
               <Button
                 key={colIndex}
                 p="1"
@@ -139,7 +138,7 @@ function Mapas() {
           </Flex>
           {/* Segunda linha com 12 botões */}
           <Flex justifyContent="center" mt={2}>
-            {[...Array(12)].map((_, colIndex) => (
+            {[...Array(10)].map((_, colIndex) => (
               <Button
                 key={colIndex + 12}
                 p="1"
@@ -162,7 +161,7 @@ function Mapas() {
           <Box mt={8}></Box>
           {/* Terceira linha com 13 botões */}
           <Flex justifyContent="center" mt={2}>
-            {[...Array(13)].map((_, colIndex) => (
+            {[...Array(12)].map((_, colIndex) => (
               <Button
                 key={colIndex + 24}
                 p="1"
@@ -183,7 +182,7 @@ function Mapas() {
           </Flex>
           {/* Quarta linha com 13 botões */}
           <Flex justifyContent="center" mt={2}>
-            {[...Array(13)].map((_, colIndex) => (
+            {[...Array(12)].map((_, colIndex) => (
               <Button
                 key={colIndex + 37}
                 p="1"
@@ -208,4 +207,4 @@ function Mapas() {
   );
 }
 
-export default Mapas;
+export default Mapas4;

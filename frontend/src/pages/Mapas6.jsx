@@ -1,12 +1,10 @@
-import { Flex, Box, Center, FormControl, Button, Image } from "@chakra-ui/react";
+import { Flex, Box, Center, Button, Image } from "@chakra-ui/react";
 import { useHistory } from 'react-router-dom';
 import { useContext } from "react";
 import UserContext from "../context/UserContext";
 import React from 'react';
- 
-
-//50 poltronas
-function Mapas() {
+ //primeiro andar (falta)
+function Mapas6() {
   const history = useHistory();
   const { user, logOut } = useContext(UserContext);
 
@@ -34,7 +32,6 @@ function Mapas() {
     history.push('/');
   }
 
-  // Array com os textos dos botões
   const buttonLabels = [
     "03", "07", "11", "15", "19",
     "23", "27", "31", "35", "39",
@@ -50,7 +47,6 @@ function Mapas() {
 
   return (
     <Box h="100vh" position="relative">
-      {/* Logo */}
       <Image 
         src="/queimadastour.png" 
         alt="Logo" 
@@ -62,7 +58,6 @@ function Mapas() {
         zIndex={1} 
       />
 
-      {/* Botão de Sair */}
       <Button
         p="1"
         type="button"
@@ -74,7 +69,7 @@ function Mapas() {
         ml="2"
         _hover={{ bg: "red.500" }}
         h="auto"
-        w="40px" // Tamanho do botão quadrado
+        w="40px"
         position="absolute"
         top={6}
         right={2}
@@ -84,7 +79,6 @@ function Mapas() {
         Sair
       </Button>
 
-      {/* Título para telas grandes */}
       <Center
         as="header"
         h={140}
@@ -97,7 +91,6 @@ function Mapas() {
         POLTRONAS 
       </Center>
 
-      {/* Conteúdo central responsivo */}
       <Flex
         align="center"
         justify="center"
@@ -116,7 +109,6 @@ function Mapas() {
           mt={{ base: 50, md: 0 }}
           flexDirection="column"
         >
-          {/* Primeira linha com 12 botões */}
           <Flex justifyContent="center" mt={2}>
             {[...Array(12)].map((_, colIndex) => (
               <Button
@@ -129,15 +121,14 @@ function Mapas() {
                 fontSize="sm"
                 m="1"
                 _hover={{ bg: "gray.900" }}
-                h="40px" // Tamanho do botão quadrado
-                w="40px" // Tamanho do botão quadrado
-                onClick={() => handleButtonClick(colIndex)}
+                h="40px"
+                w="40px"
+                // onClick={() => handleButtonClick(colIndex)} REMOVIDO
               >
                 {buttonLabels[colIndex]}
               </Button>
             ))}
           </Flex>
-          {/* Segunda linha com 12 botões */}
           <Flex justifyContent="center" mt={2}>
             {[...Array(12)].map((_, colIndex) => (
               <Button
@@ -150,17 +141,15 @@ function Mapas() {
                 fontSize="sm"
                 m="1"
                 _hover={{ bg: "gray.900" }}
-                h="40px" // Tamanho do botão quadrado
-                w="40px" // Tamanho do botão quadrado
-                onClick={() => handleButtonClick(colIndex + 12)}
+                h="40px"
+                w="40px"
+                // onClick={() => handleButtonClick(colIndex + 12)} REMOVIDO
               >
                 {buttonLabels[colIndex + 12]}
               </Button>
             ))}
           </Flex>
-          {/* Espaço entre as duas seções de botões */}
           <Box mt={8}></Box>
-          {/* Terceira linha com 13 botões */}
           <Flex justifyContent="center" mt={2}>
             {[...Array(13)].map((_, colIndex) => (
               <Button
@@ -173,15 +162,14 @@ function Mapas() {
                 fontSize="sm"
                 m="1"
                 _hover={{ bg: "gray.900" }}
-                h="40px" // Tamanho do botão quadrado
-                w="40px" // Tamanho do botão quadrado
-                onClick={() => handleButtonClick(colIndex + 24)}
+                h="40px"
+                w="40px"
+                // onClick={() => handleButtonClick(colIndex + 24)} REMOVIDO
               >
                 {buttonLabels[colIndex + 24]}
               </Button>
             ))}
           </Flex>
-          {/* Quarta linha com 13 botões */}
           <Flex justifyContent="center" mt={2}>
             {[...Array(13)].map((_, colIndex) => (
               <Button
@@ -194,9 +182,9 @@ function Mapas() {
                 fontSize="sm"
                 m="1"
                 _hover={{ bg: "gray.900" }}
-                h="40px" // Tamanho do botão quadrado
-                w="40px" // Tamanho do botão quadrado
-                onClick={() => handleButtonClick(colIndex + 37)}
+                h="40px"
+                w="40px"
+                // onClick={() => handleButtonClick(colIndex + 37)} REMOVIDO
               >
                 {buttonLabels[colIndex + 37]}
               </Button>
@@ -208,4 +196,4 @@ function Mapas() {
   );
 }
 
-export default Mapas;
+export default Mapas6;

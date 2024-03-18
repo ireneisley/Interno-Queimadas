@@ -19,6 +19,11 @@ import GestaoComandas from '../pages/GestaoComandas';
 import EditarComandas from '../pages/EditarComandas';
 import CadastroFuncionario from '../pages/CadastroFuncionario';
 import Mapas from '../pages/Mapas';
+import Mapas2 from '../pages/Mapas2';
+import Mapas3 from '../pages/Mapas3';
+import Mapas4 from '../pages/Mapas4';
+import Mapas5 from '../pages/Mapas5';
+import Mapas6 from '../pages/Mapas6';
 
 function Routes() {
   return (
@@ -40,6 +45,11 @@ function Routes() {
       <Route exact path="/editar-usuarios/:id" component={EditarUsuario} />
       <Route exact path="/editar-comandas/:id" component={EditarComandas} />
       <Route exact path="/mapas" component={Mapas} /> 
+      <Route exact path="/mapas2" component={Mapas2} /> 
+      <Route exact path="/mapas3" component={Mapas3} /> 
+      <Route exact path="/mapas4" component={Mapas4} /> 
+      <Route exact path="/mapas5" component={Mapas5} />
+      <Route exact path="/mapas6" component={Mapas6} />
     </Switch>
   )
 }
